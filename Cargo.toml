@@ -1,0 +1,12 @@
+[package]
+name = "rsx"
+version = "0.0.1"
+edition = "2021"
+
+
+[lib]
+
+
+[dependencies]
+log = "0.4.21"
+fast_log = "1.6.12"
