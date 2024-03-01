@@ -29,7 +29,7 @@ impl Default for Log<'_> {
 }
 
 impl Log<'_> {
-    fn init(&self) -> Result<&Logger, LogError> {
+    pub fn init(&self) -> Result<&Logger, LogError> {
         fast_log::init(
             fast_log::Config::new()
                 .console()
