@@ -1,9 +1,9 @@
 [package]
-name = "rsx"
+name = "rskit"
 version = "0.0.1"
 edition = "2021"
 license = "MIT"
-description="a rust tool set"
+description="rust kit"
 
 
 [lib]
