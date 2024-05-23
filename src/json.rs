@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 
+/// Serialize to string
 pub fn to<T: Serialize>(o: T) -> Result<String, &'static str> {
     if let Ok(s) = serde_json::to_string(&o) {
         return Ok(s);
@@ -7,6 +8,7 @@ pub fn to<T: Serialize>(o: T) -> Result<String, &'static str> {
     Err("can not serialize")
 }
 
+/// Deserialize from str
 pub fn from<'de, T: Deserialize<'de>>(s: &'de str) -> Result<T, &'static str> {
     if let Ok(t) = serde_json::from_str(s) {
         return Ok(t);
