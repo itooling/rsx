@@ -8,6 +8,8 @@ use fast_log::{
     Logger,
 };
 
+pub mod json;
+
 #[derive(Clone)]
 pub struct Log<'a> {
     pub file_path: &'a str,
