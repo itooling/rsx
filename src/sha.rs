@@ -1,5 +1,19 @@
 use sha2::{Digest, Sha256, Sha512};
 
+pub fn sha_256(s: &[u8]) -> String {
+    let mut sh = Sha256::new();
+    sh.update(s);
+    let res = sh.finalize();
+    return format!("{:x}", res);
+}
+
+pub fn sha_512(s: &[u8]) -> String {
+    let mut sh = Sha512::new();
+    sh.update(s);
+    let res = sh.finalize();
+    return format!("{:x}", res);
+}
+
 pub fn hash_256(s: &str) -> String {
     let mut sh = Sha256::new();
     sh.update(s);
