@@ -8,7 +8,10 @@ use fast_log::{
     Logger,
 };
 
+pub mod base;
+pub mod err;
 pub mod json;
+pub mod sha;
 
 #[derive(Clone)]
 pub struct Log<'a> {
