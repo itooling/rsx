@@ -14,6 +14,9 @@ pub mod err;
 pub mod sd;
 pub mod sha;
 
+#[cfg(feature = "ecdh")]
+pub mod ecdh;
+
 #[derive(Clone)]
 pub struct Log<'a> {
     pub file_path: &'a str,
